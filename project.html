@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+    <script src="javascript.js"></script>
+<title>Page Title</title>
+</head>
+<body>
+<div>
+    
+    <nav>
+        <div>Fundamentals of Computing</div>
+        <a href = "aboutMe.html">Dev Team</a>
+        <a href = "documentation.html">Documentation</a>
+        
+        <a href = "database.html">Databases</a>
+        
+        
+        <a href = "concepts.html">Concepts</a>
+        <a class="active" href="project.html">Projects</a>
+        <a href = "course.html">Course</a>
+    </nav>
+    
+
+    <div class="main">
+        <h1>Project</h1>
+
+        <p>The final project will consist of 4 sections. Each section has a deadline to complete. A complete description of the project can be found on the course moodle site. It will consist of launching a website built with, html, css, and javascript and hosted on github. This site is a benchmark for the Final Project. See Project Specification on Moodle Site.</p>
+        
+        <ul>
+            <li id="project1" onclick="hideProject('project1')">Project 1: NOT Gate</li>
+            <div id="notGate" style="display: none;">
+                
+                <img id="notImage" src="NotOff.JPG"><br>
+                <button onclick="notGate()">Input A</button>
+            
+            </div>
+
+            <li id="project2" onclick="hideProject('project2')">Project 2: AND Gate</li>
+            <div id="andGate" style="display: none;">
+
+                <img id="andImage" src="AndOffOff.JPG"><br>
+                <button onclick="andGate('A')">A</button> <button onclick="andGate('B')"> B</button>
+            </div>
+
+            <li id="project3" onclick="hideProject('project3')">Project 3: Binary to Hexadecimal Converter</li>
+            <div id="binary" style="display: none;">
+            
+                <img src="bintohex.jpg"><br>
+                <input id="inputBin" type="text"><br>
+                <p>Enter any 4 digit binary number:</p>
+                <button onclick="binToHex()">Submit</button>
+                <p id="demo"></p>
+
+            </div>
+
+            <li id="project4" onclick="hideProject('project4')">Project 4: ASCII Converter</li>
+            <div id="ascii" style="display: none;">
+            
+                <img src="ascii.png"><br>
+                <input id="inputdec" type="text"><br>
+                <button onclick="decToASCII()">Submit</button><br>
+                <p>Enter any number from 0 to 127 :</p>
+                <p id="demo2"></p>
+
+            </div>
+
+            <li id="project5" onclick="hideProject('project5')">Project 5: UNICODE Converter</li>
+            <div id="uni" style="display: none;">
+                
+                <img src="uni1.jpg"><br>
+                <img src="uni3.jpg"><br>
+                <img src="uni4.jpg"><br>
+                <input id="numb" type="text"><br>
+                <button onclick="myFunction()">Submit</button>
+                <p>Please input UNICODE number:</p>
+                <p id="demo3"></p>
+            </div>
+
+            <li id="project6" onclick="hideProject('project6')">Project 6: Machine Language Instructions Converter</li>
+            <div id="machine" style="display: none;">
+                
+                <img id="MLinstrucitons" src="MLblank.png"><br>
+                <p>A Simple Interactive Machine Language</p>
+                <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML1.png'; document.getElementById('Englishinstrucitons').src='EI1.png'">156C</button>
+                    <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML2.png'; document.getElementById('Englishinstrucitons').src='EI2.png'">166D</button>
+                    <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML3.png'; document.getElementById('Englishinstrucitons').src='EI3.png'">5056</button>
+                    <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML4.png'; document.getElementById('Englishinstrucitons').src='EI4.png'">306E</button>
+                    <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML5.png'; document.getElementById('Englishinstrucitons').src='EI5.png'">C000</button><br>
+                <img id="Englishinstrucitons">
+
+            
+            
+            </div>
+            
+        </ul>
+    </div>
+
+</div>
+
+<script>
+
+
+    function hideProject(project) {
+
+        let projectOne = document.getElementById("project1");
+        let notGate = document.getElementById("notGate");
+
+        let projectTwo = document.getElementById("project2");
+        let andGate = document.getElementById("andGate");
+
+        let projectThree = document.getElementById("project3");
+        let binary = document.getElementById("binary");
+
+        let projectFour = document.getElementById("project4");
+        let ascii = document.getElementById("ascii");
+
+        let projectFive = document.getElementById("project5");
+        let uni = document.getElementById("uni");
+
+        let projectSix = document.getElementById("project6");
+        let machine = document.getElementById("machine");
+        
+
+    
+        if (project === "project1") {
+            if (notGate.style.display === "none") {
+                notGate.style.display = "block";
+            } else {
+                notGate.style.display = "none";
+            }
+        }
+
+        
+        else if (project === "project2") {
+            if (andGate.style.display === "none") {
+                andGate.style.display = "block";
+            } else {
+                andGate.style.display = "none";
+            }
+        }
+
+        else if (project === "project3") {
+            if (binary.style.display === "none") {
+                binary.style.display = "block";
+            } else {
+                binary.style.display = "none";
+            }
+        }
+
+        else if (project === "project4") {
+            if (ascii.style.display === "none") {
+                ascii.style.display = "block";
+            } else {
+                ascii.style.display = "none";
+            }
+        }
+
+        else if (project === "project5") {
+            if (uni.style.display === "none") {
+                uni.style.display = "block";
+            } else {
+                uni.style.display = "none";
+            }
+        }
+
+        else if (project === "project6") {
+            if (machine.style.display === "none") {
+                machine.style.display = "block";
+            } else {
+                machine.style.display = "none";
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
+
+
